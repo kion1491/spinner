@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  html{
+    font-size: 50px;
+  }
+  .spinner-wrap{
+    font-size: inherit;
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    /* background: chartreuse; */
+    animation: spinnerAni 3s linear infinite;
+  }
+  
+  .spinner-wrap>span{
+    font-size: inherit;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+  }
+
+  .spinner-cont-red{
+    background: red;
+    left: 50%;
+    transform: translate(-0.5rem, 0);
+  }
+
+  .spinner-cont-blue{
+    background: blue;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -1rem);
+  }
+
+  .spinner-cont-yellow{
+    background: yellow;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -1rem);
+  }
+
+  .spinner-cont-green{
+    background: green;
+    left: 0;
+    bottom: 0;
+    transform: translate(0.8rem, -0.4rem);
+  }
+
+  .spinner-cont-gray{
+    background: gray;
+    right: 0;
+    bottom: 0;
+    transform: translate(-0.8rem, -0.4rem);
+  }
+  @keyframes spinnerAni{
+  100% { transform: rotate(360deg); }
+  }
+</style>
+<body>
+  <main>
+    <div class="spinner-wrap">
+      <span class="spinner-cont-red"></span>
+      <span class="spinner-cont-blue"></span>
+      <span class="spinner-cont-yellow"></span>
+      <span class="spinner-cont-green"></span>
+      <span class="spinner-cont-gray"></span>
+    </div>
+  </main>
+</body>
+</html>
